@@ -9,7 +9,8 @@
         content="Portfolio of S. Sankara Subramanian, Senior Full Stack Developer with 10+ years building scalable digital experiences." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap"
         rel="stylesheet" />
     <style>
         /* ─── Reset & Base ─────────────────────────────────────── */
@@ -88,10 +89,19 @@
             -webkit-text-fill-color: transparent;
             animation: nameShimmer 6s ease infinite;
         }
+
         @keyframes nameShimmer {
-            0%   { background-position: 0% 50%; }
-            50%  { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         /* ── Hero typewriter ── */
@@ -106,15 +116,24 @@
             align-items: center;
             gap: 2px;
         }
+
         .hero-cursor {
             display: inline-block;
             color: #818cf8;
             font-weight: 300;
             animation: cursorBlink .75s step-end infinite;
         }
+
         @keyframes cursorBlink {
-            0%, 100% { opacity: 1; }
-            50%       { opacity: 0; }
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
         }
 
         .gradient {
@@ -1817,8 +1836,7 @@
         <div class="hero-right">
             <div class="hero-image-wrap" id="heroCard">
                 <div class="ring"></div>
-                <img src="file:///D:/ssankara/development/projects/sankara_subramanian.png" class="hero-image"
-                    alt="Sankara Subramanian" />
+                <img src="/sankara_subramanian.png" class="hero-image" alt="Sankara Subramanian" />
             </div>
         </div>
 
@@ -2827,15 +2845,15 @@
                 'n8n Automation Developer',
                 'Enthusiast AI / ML Programmer'
             ];
-            const el      = document.getElementById('heroTyped');
-            let tIdx      = 0;   // current title index
-            let cIdx      = 0;   // current char index
-            let deleting  = false;
+            const el = document.getElementById('heroTyped');
+            let tIdx = 0;   // current title index
+            let cIdx = 0;   // current char index
+            let deleting = false;
 
-            const SPEED_TYPE   = 60;   // ms per character typed
+            const SPEED_TYPE = 60;   // ms per character typed
             const SPEED_DELETE = 35;   // ms per character deleted
-            const PAUSE_END    = 2200; // pause after fully typed
-            const PAUSE_START  = 400;  // pause before next word starts
+            const PAUSE_END = 2200; // pause after fully typed
+            const PAUSE_START = 400;  // pause before next word starts
 
             function tick() {
                 const current = titles[tIdx];
