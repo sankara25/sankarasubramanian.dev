@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sankara25.github.io/sankarasubramanian.dev/sitemap.xml
