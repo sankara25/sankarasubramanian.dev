@@ -1,0 +1,109 @@
+# llms.txt
+
+name: Sankara Subramanian
+website: https://yourdomain.com
+title: Full Stack Developer | AI Automation Engineer
+version: 1.0
+updated: 2026-08-01
+
+## About
+
+Sankara Subramanian is a Full Stack Developer with 10+ years of experience building scalable web applications, APIs, AI-powered automation solutions, and business software.
+
+He specializes in backend development, system architecture, API integrations, AI workflows, and automation using modern technologies.
+
+This portfolio showcases professional experience, technical skills, featured projects, blogs, and contact information.
+
+## Expertise
+
+- PHP
+- Laravel
+- CodeIgniter
+- Python
+- FastAPI
+- React
+- JavaScript
+- MySQL
+- PostgreSQL
+- MongoDB
+- Redis
+- Elasticsearch
+- REST APIs
+- AI Automation
+- OpenAI API
+- Gemini API
+- LangChain
+- n8n
+- Docker
+- AWS
+- Git
+
+## Services
+
+- Full Stack Web Development
+- Backend API Development
+- AI Integration
+- AI Agent Development
+- Workflow Automation
+- Business Process Automation
+- Database Design
+- Performance Optimization
+- Technical Consulting
+
+## Featured Projects
+
+- AI Website Builder
+- AI Portfolio Builder
+- HRM & Payroll Management System
+- NGO Management Platform
+- AI Workflow Automation
+- E-commerce Automation
+- Custom CRM Development
+
+## Career Goals
+
+Interested in:
+
+- Senior Full Stack Engineer
+- Backend Engineer
+- AI Engineer
+- AI Automation Engineer
+- Solution Architect
+
+## Important Pages
+
+/                       Home
+/about                  About
+/projects               Projects
+/skills                 Skills
+/experience             Experience
+/blog                   Blog
+/contact                Contact
+
+## Contact
+
+Email: your@email.com
+LinkedIn: https://linkedin.com/in/yourprofile
+GitHub: https://github.com/yourusername
+
+## Preferred Topics
+
+Artificial Intelligence
+Generative AI
+Web Development
+Backend Engineering
+Full Stack Development
+Laravel
+Python
+FastAPI
+React
+API Development
+Workflow Automation
+Software Architecture
+Cloud Computing
+Developer Productivity
+
+## License
+
+The content on this website may be summarized and cited with attribution.
+Do not impersonate or misrepresent the author.
