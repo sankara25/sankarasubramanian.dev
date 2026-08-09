@@ -25,7 +25,11 @@ schema = {
       "@type": "ProfilePage",
       "@id": "https://sankara25.github.io/sankarasubramanian.dev/#webpage",
       "url": "https://sankara25.github.io/sankarasubramanian.dev/",
+<<<<<<< HEAD
       "name": "Sankara Subramanian – Senior Full Stack Developer | Associate Software Engineer",
+=======
+      "name": "Sankara Subramanian – Senior Full Stack Developer | AI - Powered Full Stack Engineer",
+>>>>>>> 645db5073bc1cc445bb81a5b8efdd989d343c96e
       "isPartOf": {
         "@id": "https://sankara25.github.io/sankarasubramanian.dev/#website"
       },
@@ -64,7 +68,11 @@ schema = {
         "url": "https://sankara25.github.io/sankarasubramanian.dev/",
         "image": "https://sankara25.github.io/sankarasubramanian.dev/sankara_subramanian.png",
         "jobTitle": "Senior Full Stack Developer",
+<<<<<<< HEAD
         "description": "Senior Full Stack Developer with 10+ years of experience designing and scaling backend systems using PHP (Laravel, CodeIgniter) and Python (FastAPI), modern frontend frameworks (React, Next.js), database optimization, cloud architecture (AWS, GCP), and AI-accelerated development workflows (Cursor AI, Claude, ChatGPT).",
+=======
+        "description": "Senior Full Stack Developer and AI-Powered Engineer with 10+ years of experience designing and scaling backend systems using PHP (Laravel, CodeIgniter) and Python (FastAPI), modern frontend frameworks (React, Next.js), database optimization, cloud architecture (AWS, GCP), and AI/n8n automation workflows.",
+>>>>>>> 645db5073bc1cc445bb81a5b8efdd989d343c96e
         "email": "mailto:sankaranec@gmail.com",
         "telephone": "+919940768586",
         "address": {
@@ -81,6 +89,7 @@ schema = {
         "worksFor": [
           {
             "@type": "Organization",
+<<<<<<< HEAD
             "@id": "https://sankara25.github.io/sankarasubramanian.dev/#org-sushine",
             "name": "Sushine Exports Private Limited",
             "alternateName": "Factori.com",
@@ -94,6 +103,8 @@ schema = {
           },
           {
             "@type": "Organization",
+=======
+>>>>>>> 645db5073bc1cc445bb81a5b8efdd989d343c96e
             "@id": "https://sankara25.github.io/sankarasubramanian.dev/#org-nexilra",
             "name": "Nexilra Technology",
             "location": {
@@ -128,6 +139,7 @@ schema = {
         "hasOccupation": [
           {
             "@type": "Occupation",
+<<<<<<< HEAD
             "@id": "https://sankara25.github.io/sankarasubramanian.dev/#occupation-factori",
             "name": "Associate Software Engineer",
             "occupationalCategory": "15-1254.00 - Web Developers",
@@ -146,6 +158,8 @@ schema = {
           },
           {
             "@type": "Occupation",
+=======
+>>>>>>> 645db5073bc1cc445bb81a5b8efdd989d343c96e
             "@id": "https://sankara25.github.io/sankarasubramanian.dev/#occupation-nexilra",
             "name": "AI-Powered Full Stack Engineer",
             "occupationalCategory": "15-1254.00 - Web Developers",
@@ -207,11 +221,14 @@ schema = {
           }
         ],
         "knowsAbout": [
+<<<<<<< HEAD
           "Cursor AI",
           "Claude",
           "ChatGPT",
           "React.js",
           "Next.js",
+=======
+>>>>>>> 645db5073bc1cc445bb81a5b8efdd989d343c96e
           "PHP",
           "Laravel",
           "CodeIgniter",
@@ -219,6 +236,11 @@ schema = {
           "FastAPI",
           "JavaScript",
           "TypeScript",
+<<<<<<< HEAD
+=======
+          "React.js",
+          "Next.js",
+>>>>>>> 645db5073bc1cc445bb81a5b8efdd989d343c96e
           "Vue.js",
           "REST API Design",
           "System Architecture",
@@ -241,8 +263,12 @@ schema = {
           "Twilio API",
           "WhatsApp Business API",
           "Tailwind CSS",
+<<<<<<< HEAD
           "Bootstrap",
           "AdminLTE"
+=======
+          "Bootstrap"
+>>>>>>> 645db5073bc1cc445bb81a5b8efdd989d343c96e
         ]
       }
     },
@@ -387,4 +413,8 @@ schema = {
 formatted = json.dumps(schema, indent=2, ensure_ascii=False)
 with open("schema_ld.json", "w", encoding="utf-8") as f:
     f.write(formatted)
+<<<<<<< HEAD
 print("Updated schema_ld.json with all 4 organizations & occupations!")
+=======
+print("Updated schema_ld.json with zero warnings!")
+>>>>>>> 645db5073bc1cc445bb81a5b8efdd989d343c96e
