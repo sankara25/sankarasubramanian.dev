@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favicon Suite Showcase – Sankara Subramanian</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #07090e;
+            --bg-card: rgba(18, 24, 38, 0.7);
+            --border-glass: rgba(255, 215, 0, 0.15);
+            --gold-accent: #f59e0b;
+            --gold-glow: #fbbf24;
+            --blue-accent: #3b82f6;
+            --cyan-glow: #00f0ff;
+            --text-main: #f3f4f6;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            background-image: 
+                radial-gradient(circle at 15% 20%, rgba(59, 130, 246, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 85% 80%, rgba(245, 158, 11, 0.08) 0%, transparent 40%),
+                linear-gradient(to bottom, #07090e, #0a0d14);
+            color: var(--text-main);
+            font-family: 'Inter', -apple-system, sans-serif;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--gold-glow);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff 40%, #fbbf24 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            max-width: 680px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* ─── Grid Sections ─── */
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #fff;
+        }
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, rgba(255,255,255,0.15), transparent);
+        }
+
+        .glass-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        /* ─── Comparison Showcase ─── */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        @media (max-width: 768px) {
+            .comparison-grid { grid-template-columns: 1fr; }
+        }
+
+        .art-preview-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(0,0,0,0.35);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .art-preview-box.featured {
+            border-color: rgba(245, 158, 11, 0.4);
+            background: radial-gradient(circle at center, rgba(59, 130, 246, 0.08), rgba(0,0,0,0.4));
+        }
+
+        .art-img-wrap {
+            width: 220px;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: 
+                linear-gradient(45deg, #181d29 25%, transparent 25%),
+                linear-gradient(-45deg, #181d29 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #181d29 75%),
+                linear-gradient(-45deg, transparent 75%, #181d29 75%);
+            background-size: 16px 16px;
+            background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+        }
+        .art-img-wrap img {
+            max-width: 190px;
+            max-height: 190px;
+            object-fit: contain;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6));
+        }
+
+        .art-tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        .tag-ref { background: #334155; color: #cbd5e1; }
+        .tag-opt { background: #d97706; color: #fff; }
+
+        .art-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .feature-bullets {
+            text-align: left;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-top: 10px;
+            padding-left: 18px;
+        }
+
+        /* ─── Live Browser Mockups ─── */
+        .mockups-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        /* Dark Tab */
+        .browser-mockup {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+        .browser-dark {
+            background: #1e1f22;
+        }
+        .browser-light {
+            background: #f1f3f4;
+            color: #202124;
+        }
+
+        .tab-bar {
+            display: flex;
+            align-items: center;
+            padding: 8px 12px 0 12px;
+            gap: 8px;
+            background: #111214;
+        }
+        .browser-light .tab-bar {
+            background: #dee1e6;
+        }
+
+        .window-controls {
+            display: flex;
+            gap: 6px;
+            margin-right: 8px;
+        }
+        .control-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .dot-red { background: #ff5f56; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: #27c93f; }
+
+        .active-tab {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            border-radius: 8px 8px 0 0;
+            background: #1e1f22;
+            color: #e5e7eb;
+            font-size: 0.8rem;
+            font-weight: 500;
+            max-width: 220px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            position: relative;
+        }
+        .browser-light .active-tab {
+            background: #ffffff;
+            color: #1f2937;
+        }
+
+        .tab-favicon {
+            width: 16px;
+            height: 16px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .url-bar-mock {
+            padding: 8px 14px;
+            display: flex;
+            align-items: center;
+            font-size: 0.78rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .browser-dark .url-bar-mock {
+            background: #1e1f22;
+            color: #94a3b8;
+            border-bottom: 1px solid #2b2d31;
+        }
+        .browser-light .url-bar-mock {
+            background: #ffffff;
+            color: #5f6368;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .mockup-body {
+            padding: 24px;
+            text-align: center;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        /* ─── Size Zoom Matrix ─── */
+        .zoom-matrix {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 30px 10px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 16px;
+        }
+
+        .zoom-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .zoom-icon-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #0b0f19;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            padding: 6px;
+        }
+
+        .zoom-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* ─── Export Files Card ─── */
+        .files-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+        .files-table th {
+            text-align: left;
+            padding: 12px 16px;
+            color: var(--gold-accent);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-weight: 600;
+        }
+        .files-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            color: #cbd5e1;
+        }
+        .files-table tr:hover td {
+            background: rgba(255,255,255,0.02);
+        }
+        .file-code {
+            font-family: 'JetBrains Mono', monospace;
+            color: #60a5fa;
+            font-weight: 600;
+        }
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            background: rgba(59, 130, 246, 0.15);
+            color: #60a5fa;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        .btn-download:hover {
+            background: #3b82f6;
+            color: #ffffff;
+            border-color: #3b82f6;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: #000;
+            border: none;
+            padding: 8px 16px;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: #000;
+        }
+
+        /* ─── Alternative Options ─── */
+        .variants-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .variant-card {
+            background: rgba(0,0,0,0.25);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 14px;
+            padding: 20px;
+            text-align: center;
+        }
+        .variant-card img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="badge-pill">✨ Favicon Production Suite</div>
+            <h1>Optimized Favicon & App Icons</h1>
+            <p class="subtitle">
+                Engineered specifically for high legibility at 16×16 and 32×32 pixel sizes while faithfully retaining your signature Lion + "S" identity, royal crown, and gold/navy color harmony.
+            </p>
+        </header>
+
+        <!-- ─── Direct Comparison ─── -->
+        <div class="glass-card">
+            <h2 class="section-title">Identity & Optimization Comparison</h2>
+            <div class="comparison-grid">
+                <div class="art-preview-box">
+                    <span class="art-tag tag-ref">Original Reference</span>
+                    <div class="art-img-wrap">
+                        <img src="sankara_subramanian.png" alt="Original Logo" onerror="this.src='favicon_master_concept1.png'" />
+                    </div>
+                    <div class="art-title">Original Logo Artwork</div>
+                    <ul class="feature-bullets">
+                        <li>High complexity (circuit traces, code symbols &lt;/&gt;)</li>
+                        <li>Intricate hair strands and micro details</li>
+                        <li>Non-transparent white canvas box</li>
+                        <li>Details blur together when downscaled to 16px</li>
+                    </ul>
+                </div>
+
+                <div class="art-preview-box featured">
+                    <span class="art-tag tag-opt">Primary Favicon</span>
+                    <div class="art-img-wrap">
+                        <img src="favicon_master_concept1.png" alt="Favicon Master" />
+                    </div>
+                    <div class="art-title">Optimized Favicon Master</div>
+                    <ul class="feature-bullets">
+                        <li><strong>100% Transparent background</strong> outside gold rim</li>
+                        <li><strong>Bold metallic "S" & lion silhouette</strong> with royal crown</li>
+                        <li><strong>Cyan electric blue eye</strong> pops at all micro scales</li>
+                        <li>No clutter: crisp, high-contrast, scalable vector aesthetic</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ─── Live Tab Mockups ─── -->
+        <div class="glass-card">
+            <h2 class="section-title">Live Browser Preview Simulations</h2>
+            <div class="mockups-grid">
+                <!-- Dark Mode Tab -->
+                <div class="browser-mockup browser-dark">
+                    <div class="tab-bar">
+                        <div class="window-controls">
+                            <span class="control-dot dot-red"></span>
+                            <span class="control-dot dot-yellow"></span>
+                            <span class="control-dot dot-green"></span>
+                        </div>
+                        <div class="active-tab">
+                            <img src="favicon-16x16.png" class="tab-favicon" alt="favicon" />
+                            <span>Sankara Subramanian</span>
+                        </div>
+                    </div>
+                    <div class="url-bar-mock">
+                        🔒 https://sankarasubramanian.dev
+                    </div>
+                    <div class="mockup-body">
+                        Dark Browser Tab (16×16 px)
+                    </div>
+                </div>
+
+                <!-- Light Mode Tab -->
+                <div class="browser-mockup browser-light">
+                    <div class="tab-bar">
+                        <div class="window-controls">
+                            <span class="control-dot dot-red"></span>
+                            <span class="control-dot dot-yellow"></span>
+                            <span class="control-dot dot-green"></span>
+                        </div>
+                        <div class="active-tab">
+                            <img src="favicon-16x16.png" class="tab-favicon" alt="favicon" />
+                            <span>Sankara Subramanian</span>
+                        </div>
+                    </div>
+                    <div class="url-bar-mock">
+                        🔒 https://sankarasubramanian.dev
+                    </div>
+                    <div class="mockup-body">
+                        Light Browser Tab (16×16 px)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ─── Multi-Resolution Matrix ─── -->
+        <div class="glass-card">
+            <h2 class="section-title">Multi-Scale Resolution Matrix</h2>
+            <div class="zoom-matrix">
+                <div class="zoom-item">
+                    <div class="zoom-icon-box" style="width: 28px; height: 28px;">
+                        <img src="favicon-16x16.png" width="16" height="16" alt="16x16" />
+                    </div>
+                    <span class="zoom-label">16×16</span>
+                </div>
+
+                <div class="zoom-item">
+                    <div class="zoom-icon-box" style="width: 44px; height: 44px;">
+                        <img src="favicon-32x32.png" width="32" height="32" alt="32x32" />
+                    </div>
+                    <span class="zoom-label">32×32</span>
+                </div>
+
+                <div class="zoom-item">
+                    <div class="zoom-icon-box" style="width: 60px; height: 60px;">
+                        <img src="favicon-48x48.png" width="48" height="48" alt="48x48" />
+                    </div>
+                    <span class="zoom-label">48×48</span>
+                </div>
+
+                <div class="zoom-item">
+                    <div class="zoom-icon-box" style="width: 76px; height: 76px;">
+                        <img src="favicon-64x64.png" width="64" height="64" alt="64x64" />
+                    </div>
+                    <span class="zoom-label">64×64</span>
+                </div>
+
+                <div class="zoom-item">
+                    <div class="zoom-icon-box" style="width: 140px; height: 140px;">
+                        <img src="apple-touch-icon.png" width="120" height="120" alt="180x180" />
+                    </div>
+                    <span class="zoom-label">180×180 (Apple)</span>
+                </div>
+
+                <div class="zoom-item">
+                    <div class="zoom-icon-box" style="width: 160px; height: 160px;">
+                        <img src="android-chrome-192x192.png" width="140" height="140" alt="192x192" />
+                    </div>
+                    <span class="zoom-label">192×192 (Android)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ─── Exported Files Table ─── -->
+        <div class="glass-card">
+            <h2 class="section-title">Exported Favicon Files</h2>
+            <table class="files-table">
+                <thead>
+                    <tr>
+                        <th>File Name</th>
+                        <th>Dimensions / Format</th>
+                        <th>Purpose</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="file-code">favicon.ico</td>
+                        <td>Multi-res (16, 32, 48)</td>
+                        <td>Universal browser fallback icon</td>
+                        <td><a href="favicon.ico" download class="btn-download btn-primary">Download ICO</a></td>
+                    </tr>
+                    <tr>
+                        <td class="file-code">favicon.png</td>
+                        <td>32×32 PNG</td>
+                        <td>Standard PNG icon</td>
+                        <td><a href="favicon.png" download class="btn-download">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td class="file-code">favicon-32x32.png</td>
+                        <td>32×32 PNG</td>
+                        <td>High-DPI Retina browser tabs</td>
+                        <td><a href="favicon-32x32.png" download class="btn-download">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td class="file-code">favicon-16x16.png</td>
+                        <td>16×16 PNG</td>
+                        <td>Standard browser tabs & address bar</td>
+                        <td><a href="favicon-16x16.png" download class="btn-download">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td class="file-code">apple-touch-icon.png</td>
+                        <td>180×180 PNG</td>
+                        <td>iOS Home Screen & Safari bookmarks</td>
+                        <td><a href="apple-touch-icon.png" download class="btn-download">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td class="file-code">android-chrome-192x192.png</td>
+                        <td>192×192 PNG</td>
+                        <td>Android PWA & home screen</td>
+                        <td><a href="android-chrome-192x192.png" download class="btn-download">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td class="file-code">android-chrome-512x512.png</td>
+                        <td>512×512 PNG</td>
+                        <td>PWA splash screens & app stores</td>
+                        <td><a href="android-chrome-512x512.png" download class="btn-download">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td class="file-code">site.webmanifest</td>
+                        <td>JSON Manifest</td>
+                        <td>Progressive Web App configuration</td>
+                        <td><a href="site.webmanifest" download class="btn-download">Download</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ─── Alternative Stylized Variations ─── -->
+        <div class="glass-card">
+            <h2 class="section-title">Alternative Design Variations (Also Generated)</h2>
+            <div class="variants-grid">
+                <div class="variant-card">
+                    <img src="favicon_master_concept2.png" alt="Concept 2" />
+                    <h3 style="font-size: 1rem; margin-bottom: 6px;">Minimalist Gold Silhouette</h3>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">Ultra-clean pure gold lion & 'S' on midnight navy disc.</p>
+                    <a href="favicon_concept2.ico" download class="btn-download">Download Concept 2 ICO</a>
+                </div>
+                <div class="variant-card">
+                    <img src="favicon_master_concept3.png" alt="Concept 3" />
+                    <h3 style="font-size: 1rem; margin-bottom: 6px;">Intricate Vector Emblem</h3>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">Rich multi-toned gold mane with deep royal blue accents.</p>
+                    <a href="favicon_concept3.ico" download class="btn-download">Download Concept 3 ICO</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
