@@ -32,6 +32,26 @@ schema = {
       "breadcrumb": {
         "@id": "https://sankara25.github.io/sankarasubramanian.dev/#breadcrumb"
       },
+      "hasPart": [
+        {
+          "@id": "https://sankara25.github.io/sankarasubramanian.dev/#project-justfact"
+        },
+        {
+          "@id": "https://sankara25.github.io/sankarasubramanian.dev/#project-houseofkausheya"
+        },
+        {
+          "@id": "https://sankara25.github.io/sankarasubramanian.dev/#project-chatmaxima"
+        },
+        {
+          "@id": "https://sankara25.github.io/sankarasubramanian.dev/#project-expertconnect"
+        },
+        {
+          "@id": "https://sankara25.github.io/sankarasubramanian.dev/#project-subscriptionsystem"
+        },
+        {
+          "@id": "https://sankara25.github.io/sankarasubramanian.dev/#project-ffreedom"
+        }
+      ],
       "inLanguage": "en-US",
       "description": "Portfolio of S. Sankara Subramanian, Senior Full Stack Developer with 10+ years building scalable digital experiences, backend APIs, automation workflows, and AI systems.",
       "mainEntity": {
@@ -188,26 +208,6 @@ schema = {
           "WhatsApp Business API",
           "Tailwind CSS",
           "Bootstrap"
-        ],
-        "workExample": [
-          {
-            "@id": "https://sankara25.github.io/sankarasubramanian.dev/#project-justfact"
-          },
-          {
-            "@id": "https://sankara25.github.io/sankarasubramanian.dev/#project-houseofkausheya"
-          },
-          {
-            "@id": "https://sankara25.github.io/sankarasubramanian.dev/#project-chatmaxima"
-          },
-          {
-            "@id": "https://sankara25.github.io/sankarasubramanian.dev/#project-expertconnect"
-          },
-          {
-            "@id": "https://sankara25.github.io/sankarasubramanian.dev/#project-subscriptionsystem"
-          },
-          {
-            "@id": "https://sankara25.github.io/sankarasubramanian.dev/#project-ffreedom"
-          }
         ]
       }
     },
@@ -264,6 +264,9 @@ schema = {
       "creator": {
         "@id": "https://sankara25.github.io/sankarasubramanian.dev/#person"
       },
+      "author": {
+        "@id": "https://sankara25.github.io/sankarasubramanian.dev/#person"
+      },
       "keywords": "Python, FastAPI, MySQL, JWT, Gemini AI, GCP, News Aggregation"
     },
     {
@@ -275,6 +278,9 @@ schema = {
       "operatingSystem": "All (Web)",
       "description": "E-commerce platform with automated order management, Razorpay payment gateway integration, automated email notifications, and Tailwind CSS frontend deployed on GCP.",
       "creator": {
+        "@id": "https://sankara25.github.io/sankarasubramanian.dev/#person"
+      },
+      "author": {
         "@id": "https://sankara25.github.io/sankarasubramanian.dev/#person"
       },
       "keywords": "Laravel, MySQL, Razorpay, Tailwind CSS, GCP, E-commerce"
@@ -290,6 +296,9 @@ schema = {
       "creator": {
         "@id": "https://sankara25.github.io/sankarasubramanian.dev/#person"
       },
+      "author": {
+        "@id": "https://sankara25.github.io/sankarasubramanian.dev/#person"
+      },
       "keywords": "CodeIgniter 4, MySQL, Redis, Bootstrap, Twilio, WhatsApp API, Meta API, Chatbot"
     },
     {
@@ -300,6 +309,9 @@ schema = {
       "operatingSystem": "All (Web)",
       "description": "Secure consultation and expert onboarding platform featuring real-time session tracking, automated earnings calculation, role-based auth, Razorpay payments, and Redis caching.",
       "creator": {
+        "@id": "https://sankara25.github.io/sankarasubramanian.dev/#person"
+      },
+      "author": {
         "@id": "https://sankara25.github.io/sankarasubramanian.dev/#person"
       },
       "keywords": "FastAPI, CodeIgniter, Laravel, MySQL, MongoDB, Redis, Razorpay"
@@ -314,6 +326,9 @@ schema = {
       "creator": {
         "@id": "https://sankara25.github.io/sankarasubramanian.dev/#person"
       },
+      "author": {
+        "@id": "https://sankara25.github.io/sankarasubramanian.dev/#person"
+      },
       "keywords": "FastAPI, MongoDB, Redis, Firebase, Razorpay, Subscription API"
     },
     {
@@ -326,6 +341,9 @@ schema = {
       "creator": {
         "@id": "https://sankara25.github.io/sankarasubramanian.dev/#person"
       },
+      "author": {
+        "@id": "https://sankara25.github.io/sankarasubramanian.dev/#person"
+      },
       "keywords": "CodeIgniter, Laravel, Python, Redis, Zoho Sign, AWS, GCP"
     }
   ]
@@ -334,4 +352,4 @@ schema = {
 formatted = json.dumps(schema, indent=2, ensure_ascii=False)
 with open("schema_ld.json", "w", encoding="utf-8") as f:
     f.write(formatted)
-print("Updated schema_ld.json with perfected ProfilePage, worksFor Organization array, and hasOccupation array!")
+print("Updated schema_ld.json with zero warnings!")
