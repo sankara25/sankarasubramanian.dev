@@ -2229,6 +2229,133 @@
                 padding: 60px 24px;
             }
         }
+
+        /* ─── Floating WhatsApp Button ────────────────────────────── */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-decoration: none;
+            z-index: 99999;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45), 0 4px 12px rgba(0, 0, 0, 0.35);
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, filter 0.3s ease;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1) translateY(-3px);
+            box-shadow: 0 12px 32px rgba(37, 211, 102, 0.65), 0 6px 16px rgba(0, 0, 0, 0.45);
+            filter: brightness(1.05);
+        }
+
+        .floating-whatsapp:active {
+            transform: scale(0.95) translateY(0);
+        }
+
+        .floating-whatsapp .whatsapp-icon {
+            width: 34px;
+            height: 34px;
+            transition: transform 0.3s ease;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+        }
+
+        .floating-whatsapp:hover .whatsapp-icon {
+            transform: scale(1.08) rotate(-4deg);
+        }
+
+        /* Continuous gentle pulse ring */
+        .floating-whatsapp .whatsapp-pulse {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: #25D366;
+            opacity: 0.6;
+            z-index: -1;
+            animation: waPulse 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes waPulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+            70% {
+                transform: scale(1.48);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1.52);
+                opacity: 0;
+            }
+        }
+
+        /* Tooltip on hover */
+        .floating-whatsapp .whatsapp-tooltip {
+            position: absolute;
+            right: 74px;
+            background: rgba(15, 23, 42, 0.94);
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            padding: 8px 14px;
+            border-radius: 8px;
+            white-space: nowrap;
+            pointer-events: none;
+            opacity: 0;
+            transform: translateX(10px);
+            transition: opacity 0.25s ease, transform 0.25s ease;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(8px);
+        }
+
+        .floating-whatsapp .whatsapp-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -6px;
+            transform: translateY(-50%);
+            border-width: 6px 0 6px 6px;
+            border-style: solid;
+            border-color: transparent transparent transparent rgba(15, 23, 42, 0.94);
+        }
+
+        .floating-whatsapp:hover .whatsapp-tooltip {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .floating-whatsapp {
+                bottom: 20px;
+                right: 20px;
+                width: 52px;
+                height: 52px;
+            }
+
+            .floating-whatsapp .whatsapp-icon {
+                width: 28px;
+                height: 28px;
+            }
+
+            .floating-whatsapp .whatsapp-tooltip {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -2251,7 +2378,7 @@
                 backend systems, automation workflows, and AI-powered platforms.
             </p>
             <div class="btns">
-                <a href="#about" class="btn primary">View Projects</a>
+                <a href="sankara_subramanian_FullStack_Engineer.pdf" target="_blank" rel="noopener noreferrer" class="btn primary">Resume</a>
                 <a href="#about" class="btn secondary">Contact Me</a>
             </div>
         </div>
@@ -3328,6 +3455,22 @@
             tick();
         })();
     </script>
+
+    <!-- ══════════════════════════════════════════════════════════
+         FLOATING WHATSAPP BUTTON
+         ══════════════════════════════════════════════════════════ -->
+    <a href="https://wa.me/919940768586?text=Hi%20Sankara%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect."
+       class="floating-whatsapp"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Chat with Sankara on WhatsApp"
+       id="whatsappFloatingBtn">
+        <span class="whatsapp-tooltip">Chat on WhatsApp</span>
+        <div class="whatsapp-pulse"></div>
+        <svg class="whatsapp-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16 2C8.268 2 2 8.268 2 16C2 18.665 2.748 21.164 4.053 23.3L2.3 29.7L8.887 27.973C10.957 29.255 13.393 30 16 30C23.732 30 30 23.732 30 16C30 8.268 23.732 2 16 2ZM16 27.5C13.722 27.5 11.597 26.837 9.805 25.696L9.387 25.43L5.474 26.455L6.522 22.642L6.23 22.178C4.965 20.317 4.25 18.238 4.25 16C4.25 9.51 9.51 4.25 16 4.25C22.49 4.25 27.75 9.51 27.75 16C27.75 22.49 22.49 27.5 16 27.5ZM22.41 19.345C22.06 19.17 20.34 18.32 20.02 18.2C19.7 18.09 19.47 18.03 19.23 18.38C19 18.73 18.33 19.52 18.13 19.75C17.93 19.98 17.72 20.01 17.37 19.84C17.02 19.66 15.9 19.3 14.56 18.1C13.52 17.18 12.82 16.04 12.61 15.69C12.41 15.34 12.59 15.15 12.76 14.98C12.92 14.82 13.12 14.56 13.29 14.36C13.47 14.16 13.53 14.01 13.64 13.78C13.76 13.55 13.7 13.35 13.61 13.17C13.53 13.00 12.83 11.28 12.53 10.58C12.25 9.89 11.97 9.99 11.75 9.98C11.55 9.97 11.32 9.97 11.08 9.97C10.85 9.97 10.47 10.06 10.15 10.41C9.83 10.76 8.93 11.6 8.93 13.32C8.93 15.04 10.18 16.7 10.36 16.93C10.53 17.16 12.83 20.71 16.35 22.23C17.19 22.59 17.84 22.81 18.35 22.97C19.19 23.24 19.96 23.2 20.57 23.11C21.25 23.01 22.66 22.25 22.95 21.43C23.24 20.62 23.24 19.92 23.15 19.78C23.07 19.63 22.76 19.52 22.41 19.345Z" fill="white"/>
+        </svg>
+    </a>
 </body>
 
 </html>
